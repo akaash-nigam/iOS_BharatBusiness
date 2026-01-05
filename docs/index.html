@@ -114,7 +114,7 @@
         /* Hero Section */
         .hero {
             background: linear-gradient(135deg, #FFF5F0 0%, #fff 50%, #F0FFF4 100%);
-            padding: 140px 20px 80px;
+            padding: 180px 20px 80px;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -720,6 +720,68 @@
             }
         }
 
+        /* India Strip */
+        .india-strip {
+            background: linear-gradient(135deg, #FF6B35 0%, #138808 100%);
+            color: white;
+            padding: 8px 20px;
+            text-align: center;
+            font-size: 0.9rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        .india-strip .badge {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            font-weight: 500;
+        }
+
+        /* Infographic Section */
+        .infographic-section {
+            padding: 60px 20px;
+            background: linear-gradient(135deg, #FFF5F0 0%, #F0FFF4 100%);
+        }
+        .infographic-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        .infographic-content h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+        .infographic-content p {
+            color: var(--gray);
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        .infographic-list {
+            list-style: none;
+        }
+        .infographic-list li {
+            padding: 0.6rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            color: var(--dark);
+        }
+        .infographic-list .icon {
+            color: var(--primary);
+            font-size: 1.2rem;
+        }
+        .infographic-image img {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .hero h1 {
@@ -777,11 +839,28 @@
             .app-badges {
                 justify-content: center;
             }
+
+            .infographic-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .india-strip {
+                font-size: 0.8rem;
+                gap: 10px;
+            }
         }
     </style>
 </head>
 <body>
-    <header>
+    <!-- India Strip -->
+    <div class="india-strip">
+        <span class="badge">🇮🇳 Made in India</span>
+        <span class="badge">🔒 Indian Data Protection Compliant</span>
+        <span class="badge">⭐ 4.9★ App Store Rating</span>
+        <span class="badge">📄 GST Registered</span>
+    </div>
+
+    <header style="top: 36px;">
         <nav class="container">
             <div class="logo">
                 <span class="flag">🇮🇳</span>
@@ -922,6 +1001,29 @@
                     <div class="step-number">4</div>
                     <h3>Save Time & Money</h3>
                     <p>Automate repetitive tasks and focus on growing your business</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infographic Section -->
+    <section class="infographic-section">
+        <div class="container">
+            <div class="infographic-grid">
+                <div class="infographic-content">
+                    <h2>Complete GST Compliance for Indian Businesses</h2>
+                    <p>From registration to filing, BharatBusiness handles every aspect of your GST requirements with automated precision.</p>
+                    <ul class="infographic-list">
+                        <li><span class="icon">✓</span> Automatic GSTIN validation</li>
+                        <li><span class="icon">✓</span> GSTR-1 & GSTR-3B ready exports</li>
+                        <li><span class="icon">✓</span> HSN/SAC code management</li>
+                        <li><span class="icon">✓</span> Inter-state IGST calculations</li>
+                        <li><span class="icon">✓</span> UPI & NEFT payment integration</li>
+                        <li><span class="icon">✓</span> INR invoice templates</li>
+                    </ul>
+                </div>
+                <div class="infographic-image">
+                    <img src="infographic-business-india.png" alt="BharatBusiness GST compliance and business management infographic">
                 </div>
             </div>
         </div>
